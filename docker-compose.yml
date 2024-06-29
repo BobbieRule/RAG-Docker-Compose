@@ -3,7 +3,7 @@ version: "3.8"
 services:
   backend:
     build:
-      context: https://github.com/BobbieRule/RAG-Backend.git#main
+      context: ./RAG-Backend
       dockerfile: Dockerfile
 
     ports:
@@ -12,12 +12,9 @@ services:
     networks:
       - app-network
 
-    env_file:
-      - .env.backend
-
   frontend:
     build:
-      context: https://github.com/BobbieRule/RAG-Frontend.git#main
+      context: ./RAG-Frontend
       dockerfile: Dockerfile
 
     ports:
@@ -25,9 +22,6 @@ services:
 
     networks:
       - app-network
-
-    env_file:
-      - .env.frontend
 
 networks:
   app-network:
