@@ -131,3 +131,6 @@ dist
 
 .env.frontend
 .env.backend
+
+RAG-Frontend
+RAG-Backend
